@@ -1,0 +1,95 @@
+$color-1: #219BFF; // Nav blue
+$color-2: #244B6B; // dark blue
+$color-4: #ffffff; // white
+$color-5: #51687A; // Font grey
+
+body {
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: $color-2;
+}
+
+a:hover {
+    color: $color-1;
+}
+
+p {
+    color: $color-5;
+}
+
+h1{
+    color: $color-2;
+}
+
+//making grid
+//1 column grid
+
+.col-1 {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+//3 clumn grid
+
+.col-3 {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+//Navbar elements
+.navBar, .footerBar {
+    margin-top: 0;
+    background-color: $color-1;
+    padding: 10px;
+    a {
+        text-decoration: none;
+        color: $color-4;
+        border: $color-4 solid 1px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    a:hover {
+        background-color: $color-4;
+        color: $color-1;
+    }
+}
+
+//Body elements
+//mainBody
+.mainBody {
+    height: 90vh;
+}
+
+//First section
+.sec-1{
+    h1 {
+        margin-bottom: 0px;
+        margin-top: 5px;
+    }
+    h5{
+        margin-top: 3px;
+        margin-bottom: 0px;
+    }
+    p {
+        margin-bottom: 0px;
+        margin-top: 5px;
+    }
+    li{
+        color: $color-5;
+    }
+}
+
+
+//Footer
+
+.footerBar {
+    p{
+        color: $color-4;
+        margin: 0;
+    }
+    margin-bottom: 0;
+}
