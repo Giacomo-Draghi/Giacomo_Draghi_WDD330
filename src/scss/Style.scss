@@ -11,6 +11,10 @@ a{
     color: $color-2;
 }
 
+h1,h2,h3,h4{
+    color: $color-2;
+}
+
 a:hover {
     color: $color-1;
 }
@@ -19,9 +23,7 @@ p {
     color: $color-5;
 }
 
-h1{
-    color: $color-2;
-}
+
 
 //making grid
 //1 column grid
@@ -36,8 +38,7 @@ h1{
 .col-3 {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 10px;
 }
 
 //Navbar elements
@@ -60,15 +61,15 @@ h1{
 
 //Body elements
 //mainBody
-.mainBody {
-    height: 90vh;
-}
 
 //First section
 .sec-1{
     h1 {
         margin-bottom: 0px;
         margin-top: 5px;
+    }
+    h1#link:hover{
+        color: $color-1;
     }
     h5{
         margin-top: 3px;
@@ -92,4 +93,30 @@ h1{
         margin: 0;
     }
     margin-bottom: 0;
+}
+
+
+//Week 1 pers
+
+.storyTools {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.part-2 button {
+    color: $color-4;
+    background-color: $color-1;
+    border-radius: 5px;
+}
+
+.part-2 button:hover {
+    color: $color-1;
+    background-color: $color-4;
+}
+#story_editor {
+    width: 100%;
+    height: 100px;
 }

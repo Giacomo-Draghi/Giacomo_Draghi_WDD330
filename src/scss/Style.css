@@ -5,14 +5,14 @@ a {
   text-decoration: none;
   color: #244B6B; }
 
+h1, h2, h3, h4 {
+  color: #244B6B; }
+
 a:hover {
   color: #219BFF; }
 
 p {
   color: #51687A; }
-
-h1 {
-  color: #244B6B; }
 
 .col-1 {
   display: grid;
@@ -21,8 +21,7 @@ h1 {
 .col-3 {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  margin-top: 10px;
-  margin-bottom: 10px; }
+  padding: 10px; }
 
 .navBar, .footerBar {
   margin-top: 0;
@@ -38,12 +37,11 @@ h1 {
     background-color: #ffffff;
     color: #219BFF; }
 
-.mainBody {
-  height: 90vh; }
-
 .sec-1 h1 {
   margin-bottom: 0px;
   margin-top: 5px; }
+.sec-1 h1#link:hover {
+  color: #219BFF; }
 .sec-1 h5 {
   margin-top: 3px;
   margin-bottom: 0px; }
@@ -58,5 +56,25 @@ h1 {
   .footerBar p {
     color: #ffffff;
     margin: 0; }
+
+.storyTools {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px; }
+
+.part-2 button {
+  color: #ffffff;
+  background-color: #219BFF;
+  border-radius: 5px; }
+
+.part-2 button:hover {
+  color: #219BFF;
+  background-color: #ffffff; }
+
+#story_editor {
+  width: 100%;
+  height: 100px; }
 
 /*# sourceMappingURL=Style.css.map */
