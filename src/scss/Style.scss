@@ -6,6 +6,7 @@ $color-5: #51687A; // Font grey
 body {
     margin: 0;
 }
+
 a{
     text-decoration: underline;
     color: $color-2;
@@ -21,6 +22,11 @@ a:hover {
 
 p {
     color: $color-5;
+}
+
+.wrap {
+    min-height: 100vh;
+    margin: 0;
 }
 
 
@@ -95,6 +101,7 @@ p {
     margin-bottom: 0;
     a {
         display: inline-block;
+        margin-left: 5px;
     }
 }
 

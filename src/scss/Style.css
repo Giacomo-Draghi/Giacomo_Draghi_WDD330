@@ -14,6 +14,10 @@ a:hover {
 p {
   color: #51687A; }
 
+.wrap {
+  min-height: 100vh;
+  margin: 0; }
+
 .col-1 {
   display: grid;
   grid-template-columns: auto; }
@@ -57,7 +61,8 @@ p {
     color: #ffffff;
     margin: 0; }
   .footerBar a {
-    display: inline-block; }
+    display: inline-block;
+    margin-left: 5px; }
 
 .storyTools {
   display: grid;
