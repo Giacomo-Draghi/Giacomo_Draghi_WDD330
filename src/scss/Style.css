@@ -2,7 +2,7 @@ body {
   margin: 0; }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #244B6B; }
 
 h1, h2, h3, h4 {
@@ -20,7 +20,7 @@ p {
 
 .col-3 {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 0fr 3fr 0fr;
   padding: 10px; }
 
 .navBar, .footerBar {
@@ -56,6 +56,8 @@ p {
   .footerBar p {
     color: #ffffff;
     margin: 0; }
+  .footerBar a {
+    display: inline-block; }
 
 .storyTools {
   display: grid;
@@ -76,5 +78,11 @@ p {
 #story_editor {
   width: 100%;
   height: 100px; }
+
+@media only screen and (min-width: 600px) {
+  .col-3 {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 10px; } }
 
 /*# sourceMappingURL=Style.css.map */
