@@ -1,0 +1,21 @@
+{
+    "temple": [{
+        "title": "Week1",
+        "link" : "week1.html",
+        "intro" : "intro:",
+        "text" : "Here you will find some of my notes from the very first week and even one small exercise where you can write your very own story!"
+      },
+      {
+        "title": "Week2-Team",
+        "link" : "week2Team.html",
+        "intro" : "intro:",
+        "text" : "Here you will find the work the Team did for this week"
+      },
+      {
+        "title": "Week2",
+        "link" : "week2.html",
+        "intro" : "intro:",
+        "text" : "Here you will find some notes from week 2 readings and most important, a Quiz that uses a mix of Array and functions."
+      }
+    ]
+  }
