@@ -15,7 +15,13 @@ const ind = [{
         link : "week2Team.html",
         intro : "intro:",
         text : "Here you will find the work the Team did for this week. "
-      }
+    },
+    {
+        title: "Week3",
+        link: "week3.html",
+        intro: "intro:",
+        text: "Here you will find Some of my notes from this week about object and more, it will also be linked the team work as well! "
+    }
     ];
 
     ind.forEach(ind => {
