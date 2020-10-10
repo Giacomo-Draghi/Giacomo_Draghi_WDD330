@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Giacomo Draghi|Week-3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="screen" href="src/scss/Style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="col-3 navBar">
+            <div></div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+            </div>
+            <div></div>
+        </div>
+        <div class="col-3 mainBody">
+            <div></div>
+            <div class="sec-1">
+                <h1>D&D Characters</h1>
+                <h5>Notes:</h5>
+                <p>
+                    This week I worked a litte more on classes and forms, insted of havign a lot of notes, I decided to turn in a simple but really fun
+                    exercise I did for this week. <br>
+                    In the following you will find a little from, what it does is askind you to insert a name, any name will work, and to choose your race and class. 
+                    Starting from that it will introduce you to your D&D character and is going to do that by populating a class and showing some alerts. <br>
+                    Feel free to inspect the code and read in the script section.
+                </p> <br>
+                <form id='dAndD'>
+                    <label for='heroName'>Name:
+                        <input type='text' id='heroName' name='heroName' autofocus placeholder='Your Hero Name' maxlength=32> <br><br>
+                        Race:
+                        <select name = "dropdown" id='heroRace'>
+                            <option value = "Human" selected>Human</option>
+                            <option value = "Dwarf">Dwarf</option>
+                            <option value = "Elf">Elf</option>
+                        </select> <br><br>
+                        Class:
+                        <select name = "dropdown" id='heroClass'>
+                            <option value = "Warrior" selected>Warrior</option>
+                            <option value = "Ranger">Ranger</option>
+                            <option value = "Paladin">Paladin</option>
+                        </select> <br><br>
+                    </label>
+                    
+                </form>
+                <button onclick="createHero()">Create Your D&D Hero!</button>
+            </div>
+            <div></div>
+            <div></div>
+            <div class="sec-1 part-2">
+                <h1>Some More Exercising!</h1>
+                <h5>Working on team material:</h5>
+                <p> <a href="https://giacomo-draghi.github.io/WDD330-Team1/week4.html" target="_blank">Here</a> 
+                you will find the work I did with my team this week.
+            </div>
+            <div></div>
+        </div>
+        <footer class="col-3 footerBar">
+            <div></div>
+            <div class="footer">
+                <p>Website Made by: <a href="https://github.com/Giacomo-Draghi/Giacomo_Draghi_WDD330" target="_blank">Giacomo Draghi</a></p>
+            </div>
+            <div></div>
+        </footer>
+    </div>
+    <script>
+        //const form = document.forms['dAndD'];
+        //form.addEventListener('submit', createHero, false);
+        class Hero {
+            constructor (name, race, weapon, cl, hitting) {
+                this.name = name;
+                this.race = race;
+                this.weapon = weapon;
+                this.cl = cl;
+                this.hitting = hitting;
+            }
+            introduce (enter){
+                return this.enter = enter; 
+            }
+            attack (){
+                let attack = this.race +' usually strikes his enemy with a ' + this.weapon;
+                return attack;
+            }
+
+            damage (){
+                let damage = this.cl + ' usually has strog ' + this.hitting + ', and uses it to deal damage to his enemy';
+                return damage;
+            }
+        }
+
+        function createHero(){
+            const form = document.forms['dAndD'];
+            let name = form.heroName.value; 
+            let race = form.heroRace.value;
+            let weapon;
+            if (race == 'Human') {
+                weapon = 'Sword';
+            }
+            else if (race == 'Dwarf') {
+                weapon = 'Bow';
+            }
+            else {
+                weapon = 'Mace';
+            };
+            let cl = form.heroClass.value;
+            let hitting;
+            let enter = 'Hi my name is ' + name + ' and I am a ' + cl;
+            if (cl == 'Warrior') {
+                hitting = 'Brute force';
+            }
+            else if (cl == 'Ranger') {
+                hitting = 'Dexterity';
+            } else {
+                hitting = 'Divine Power';
+                enter = 'Hi my name is ' + name + ' and I am a ' + cl + ' the best class in the entire game!';
+            };
+
+            if (cl == 'Paladin' && name == 'Jachin' && race == 'Human'){
+                enter = 'Hi my name is ' + name + ' and I am a the best ' + cl + ' ever existed and. I will do EVRYTHING it is needed to reach what I want.'
+            }
+            const hero = new Hero(name, race, weapon, cl, hitting);
+            
+            alert(hero.introduce(enter))
+            alert(hero.attack());
+            alert(hero.damage());
+        }
+    </script>
+</body>
+
+
+</html>
