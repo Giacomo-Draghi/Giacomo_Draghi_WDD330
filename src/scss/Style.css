@@ -89,5 +89,38 @@ p {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     padding: 10px; } }
+header {
+  display: grid;
+  padding: 10px;
+  background-color: #219BFF; }
+  header form {
+    float: right; }
+
+input, button {
+  border: 1.5px solid #51687A;
+  border-radius: 5px; }
+
+button {
+  background-color: #219BFF;
+  color: #ffffff; }
+
+.completed {
+  text-decoration: line-through; }
+
+.to-do-input-bar {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 10px; }
+  .to-do-input-bar input {
+    width: 100%; }
+
+.table-output tbody tr {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr 1fr 1fr; }
+
+.additionaBtn {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px; }
 
 /*# sourceMappingURL=Style.css.map */

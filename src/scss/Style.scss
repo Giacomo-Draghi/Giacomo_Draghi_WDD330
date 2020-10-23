@@ -139,3 +139,44 @@ p {
         padding: 10px;
     }
 }
+
+
+//To Do
+header {
+    display: grid;
+    padding: 10px;
+    background-color: $color-1;
+    form {
+        float: right;
+    }
+}
+input, button {
+    border: 1.5px solid $color-5;
+    border-radius: 5px;
+}
+
+button {
+    background-color: $color-1;
+    color: $color-4;
+}
+.completed{text-decoration: line-through;}
+
+.to-do-input-bar {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 10px;
+    input {
+        width: 100%;
+    }
+}
+
+.table-output tbody tr {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 1fr 1fr;
+}
+
+.additionaBtn {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}

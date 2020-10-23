@@ -1,38 +1,44 @@
 const ind = [{
-        title: "Week1",
+        title: "Week 1",
         link : "week1.html",
         intro : "intro:",
         text : "Here you will find some of my notes from the very first week and even one small exercise where you can write your very own story! "
       },
       {
-        title: "Week2",
+        title: "Week 2",
         link : "week2.html",
         intro : "intro:",
         text : "Here you will find some notes from week 2 readings and most important, a Quiz that uses a mix of Array and functions. "
       },
       {
-        title: "Week2-Team",
+        title: "Week 2-Team",
         link : "week2Team.html",
         intro : "intro:",
         text : "Here you will find the work the Team did for this week. "
     },
     {
-        title: "Week3",
+        title: "Week 3",
         link: "week3.html",
         intro: "intro:",
         text: "Here you will find Some of my notes from this week about object and more, it will also be linked the team work as well! "
     },
     {
-        title: "Week4",
+        title: "Week 4",
         link: "week4.html",
         intro: "intro:",
-        text: "Here you will my little exercise for this week."
+        text: "Here you will my little exercise for this week. "
     },
     {
-        title: "Week5",
+        title: "Week 5",
         link: "week5.html",
         intro: "intro:",
-        text: "Here you will find my short notes from this week."
+        text: "Here you will find my short notes from this week. "
+    },
+    {
+        title: "Week 6",
+        link: "week6.html",
+        intro: "intro:",
+        text: "Here you will find my To Do list application. "
     }
     ];
 
