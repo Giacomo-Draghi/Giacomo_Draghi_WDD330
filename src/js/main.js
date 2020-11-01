@@ -39,6 +39,12 @@ const ind = [{
         link: "week6.html",
         intro: "intro:",
         text: "Here you will find my To Do list application. "
+    },
+    {
+        title: "Week 7",
+        link: "week7.html",
+        intro: "intro:",
+        text: "Here you will find my short notes from this week's reading. "
     }
     ];
 
