@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Giacomo Draghi|Week-1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="screen" href="src/scss/Style.css">
+    <script>
+        function loadStory(){
+            var storyName = document.getElementById('name_input').value
+            var storyHTML = localStorage.getItem(storyName)
+            document.getElementById('story_editor').value = storyHTML
+        }
+        function saveStory(){
+            var storyName = document.getElementById('name_input').value
+            var storyHTML = document.getElementById('story_editor').value
+            localStorage.setItem(storyName, storyHTML)
+        }
+        function dsiplayStory(){
+            var storyHTML = document.getElementById('story_editor').value
+            document.getElementById('story_display').innerHTML = storyHTML
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="col-3 navBar">
+            <div></div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+            </div>
+            <div></div>
+        </div>
+        <div class="col-3 mainBody">
+            <div></div>
+            <div class="sec-1">
+                <h1>Notes</h1>
+                <h5>Windows Object:</h5>
+                <p>Variable that are declared without the words “var, let, const” are global variable and can be called using window.[variable_name]. <br><br>
+                    The window.location property is an object that contains information about the URL of the current page, here is a list of property you can use:
+                </p>
+                <ul>
+                    <li>
+                        Href (Returns the full URL)
+                    </li>
+                    <li>
+                        Protocol (Returns a string with the protocol such as hht, https, etc…)
+                    </li>
+                    <li>
+                        Host (Returns a sting with the domain)
+                    </li>
+                    <li>
+                        Hostname (Returns a string with the domain URL)
+                    </li>
+                    <li>
+                        Port (Returns a string with the port number)
+                    </li>
+                    <li>
+                        Pathname (Returns a string of the path that follows the domain)
+                    </li>
+                    <li>
+                        Search (Returns a string with the query parameters) 
+                    </li>
+                    <li>
+                        Hash (Returns a string that starts with a “#” followed by the fragment identifier)
+                    </li>
+                    <li>
+                        Origin (Returns a string that shows the protocol and domain where the current page originated from)
+                    </li>
+                </ul>
+                <p>I also found some more interesting information about windows objects in the following page link<br><br>
+                </p>
+            </div>
+            <div></div>
+            <div></div>
+            <div class="sec-1 part-2">
+                <h1>Exercising!</h1>
+                <h5>Working on the week material:</h5>
+                <p>In the following you will find the exercies from team work from this week.</p>
+
+                <h2>Sound Board!</h2>
+                <div class="keys">
+                    <div data-key="65" class="key">
+                      <kbd>A</kbd>
+                      <span class="sound">clap</span>
+                    </div>
+                    <div data-key="83" class="key">
+                      <kbd>S</kbd>
+                      <span class="sound">hihat</span>
+                    </div>
+                    <div data-key="68" class="key">
+                      <kbd>D</kbd>
+                      <span class="sound">kick</span>
+                    </div>
+                    <div data-key="70" class="key">
+                      <kbd>F</kbd>
+                      <span class="sound">openhat</span>
+                    </div>
+                    <div data-key="71" class="key">
+                      <kbd>G</kbd>
+                      <span class="sound">boom</span>
+                    </div>
+                    <div data-key="72" class="key">
+                      <kbd>H</kbd>
+                      <span class="sound">ride</span>
+                    </div>
+                    <div data-key="74" class="key">
+                      <kbd>J</kbd>
+                      <span class="sound">snare</span>
+                    </div>
+                    <div data-key="75" class="key">
+                      <kbd>K</kbd>
+                      <span class="sound">tom</span>
+                    </div>
+                    <div data-key="76" class="key">
+                      <kbd>L</kbd>
+                      <span class="sound">tink</span>
+                    </div>
+                  </div>
+            </div>
+            <div></div>
+        </div>
+        <footer class="col-3 footerBar">
+            <div></div>
+            <div class="footer">
+                <p>Website Made by: <a href="https://github.com/Giacomo-Draghi/Giacomo_Draghi_WDD330" target="_blank">Giacomo Draghi</a></p>
+            </div>
+            <div></div>
+        </footer>
+        <audio data-key="65" src="sounds/clap.wav"></audio>
+        <audio data-key="83" src="sounds/hihat.wav"></audio>
+        <audio data-key="68" src="sounds/kick.wav"></audio>
+        <audio data-key="70" src="sounds/openhat.wav"></audio>
+        <audio data-key="71" src="sounds/boom.wav"></audio>
+        <audio data-key="72" src="sounds/ride.wav"></audio>
+        <audio data-key="74" src="sounds/snare.wav"></audio>
+        <audio data-key="75" src="sounds/tom.wav"></audio>
+        <audio data-key="76" src="sounds/tink.wav"></audio>
+      
+      <script>
+        const keys = document.querySelectorAll('.key');
+      keys.forEach(key =>
+          {key.addEventListener('transitionend', removeClass)
+          key.moveCount = 1;
+          });
+      window.addEventListener('keydown' , playSound);
+      function playSound(e)
+      {
+          const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+          const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+          if(!audio)
+          {
+              return;
+          }
+          key.classList.add('playing');
+          audio.currentTime=0;
+          audio.play();
+          moveKey(key);
+      }
+      function removeClass(e)
+      {
+          if(e.propertyName !== 'transform')
+          {
+              return;
+          }
+          this.classList.remove('playing');
+          console.log (e.propertyName);
+      }
+      function moveKey(key)
+      {
+          let movepx = "";
+          if(key.moveCount < 10)
+          {
+              movepx = key.moveCount * 10 + 'px';
+              key.style.transform = `translateY(${movepx})`;
+              key.moveCount++;
+          }
+          else
+          {
+              key.moveCount = 0;
+              movepx = '0px';
+              key.style.transform = `translateY(${movepx})`;
+              key.moveCount++;
+          }
+      }
+      </script>
+    </div>
+</body>
+
+
+</html>
