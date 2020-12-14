@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scripture App</title>
+  <link rel="stylesheet" media="screen" href="src/scss/Style.css">
+</head>
+
+<body>
+  <header>
+    <div class="col-3 navBar">
+      <div></div>
+      <div class="menu">
+          <a href="index.html">Home</a>
+          <form>
+            <input type="search" placeholder="Search in Notes" aria-label="Search"
+              id="searchtextbox" />
+          </form>
+      </div>
+      <div></div>
+  </div>
+  </header>
+  <div class="col-3 mainBody">
+    <div></div>
+    <div class="sec-1">
+      <h1>Welcome in The Scripture Application</h1>
+      <div class="scripture-input-bar">
+        <div class="form">
+            <div>
+                <label>Book:</label>
+                <select name="book" id="addBook">
+                    <option value="Book of Mormon" selected>Book of Mormon</option> 
+                    <option value="D&C">D&C</option>      
+                    <option value="Pearl of Great Price">Pearl of Great Price</option>       
+                    <option value="Bible">Bible</option>
+                </select>
+            </div>
+            <div>
+                <label>Verses:</label>
+                <input type="text" class="form-control" placeholder="Example: Nephi 3:62-65,69" id="addVerses" required/>
+            </div>
+            <div>
+                <label>Notes:</label>
+                <input type="text" class="form-control" placeholder="Example: I loved the feeling while reading" id="addNotes" />
+            </div>
+            <input type="hidden" id="saveindex">
+        </div>
+        <button type="button" id="addScriptureBtn">
+          Add Scripture
+        </button>
+        <button type="button" id="savescripturebtn" style="display: none;">
+          Save scripture
+        </button>
+        <button type="button" id="deleteallbtn">
+          Delete All
+        </button>
+      </div>
+      <div class="to-do-output">
+        <table class="table-output" >
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Book</th>
+              <th>Verses</th>
+              <th>Notes</th>
+              <th>Read</th>
+            </tr>
+          </thead>
+          <tbody id="addedScriptureList">
+
+          </tbody>
+        </table>
+      </div>
+      <div class="additionaBtn">
+        <button type="button" id="showComplitescripture">
+          Read
+        </button>
+        <button type="button" id="toDoscriptureShow">
+          To Read
+        </button>
+        <button type="button" id="showAllscripture">
+          Show All
+        </button>
+      </div>
+      </div>
+    </div>
+    <div></div>
+</div>
+  <footer class="col-3 footerBar">
+    <div></div>
+    <div class="footer">
+        <p>Website Made by: <a href="https://github.com/Giacomo-Draghi/Giacomo_Draghi_WDD330" target="_blank">Giacomo Draghi</a></p>
+    </div>
+    <div></div>
+</footer>
+  <script src="src/js/ScriptureCatalog.js"></script>
+</body>
+
+</html>

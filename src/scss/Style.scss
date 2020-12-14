@@ -131,14 +131,7 @@ p {
     height: 100px;
 }
 
-//Large screen
-@media only screen and (min-width: 600px) {
-    .col-3 {
-        display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
-        padding: 10px;
-    }
-}
+
 
 
 //To Do
@@ -444,3 +437,72 @@ div.special {
     letter-spacing: .1rem;
     color: #ffc600;
   }
+
+  //Final Challenge
+
+  #addVerses:valid {
+    border-color: green;
+  }
+
+  #addVerses:invalid {
+    border-color: red;
+  }
+  
+  .form input {
+    border: 2px solid black;
+  }
+
+  table input[type=checkbox] {
+    width: auto;
+    height: auto;
+    position: relative;
+    opacity: unset;
+  }
+
+  .form div {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin-bottom: 5px;
+    input {
+      width: inherit;
+    }
+  }
+
+  .scripture-input-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+thead tr{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+}
+
+#addedScriptureList tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+  td button{
+    width: 100%;
+  }
+  #checkbox {
+    text-align: center;
+  }
+}
+
+//Large screen
+@media only screen and (min-width: 600px) {
+  .col-3 {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 10px;
+  }
+  .scripture-input-bar {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

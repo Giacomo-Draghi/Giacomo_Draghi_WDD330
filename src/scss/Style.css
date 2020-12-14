@@ -84,11 +84,6 @@ p {
   width: 100%;
   height: 100px; }
 
-@media only screen and (min-width: 600px) {
-  .col-3 {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    padding: 10px; } }
 header {
   display: grid;
   padding: 10px;
@@ -369,5 +364,58 @@ kbd {
   text-transform: uppercase;
   letter-spacing: .1rem;
   color: #ffc600; }
+
+#addVerses:valid {
+  border-color: green; }
+
+#addVerses:invalid {
+  border-color: red; }
+
+.form input {
+  border: 2px solid black; }
+
+table input[type=checkbox] {
+  width: auto;
+  height: auto;
+  position: relative;
+  opacity: unset; }
+
+.form div {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  margin-bottom: 5px; }
+  .form div input {
+    width: inherit; }
+
+.scripture-input-bar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+thead tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 3fr 1fr; }
+
+#addedScriptureList tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 3fr 1fr; }
+  #addedScriptureList tr td button {
+    width: 100%; }
+  #addedScriptureList tr #checkbox {
+    text-align: center; }
+
+@media only screen and (min-width: 600px) {
+  .col-3 {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 10px; }
+
+  .scripture-input-bar {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px; } }
 
 /*# sourceMappingURL=Style.css.map */

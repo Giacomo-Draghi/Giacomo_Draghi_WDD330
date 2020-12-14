@@ -63,6 +63,18 @@ const ind = [{
         link: "week10.html",
         intro: "intro:",
         text: "Here you will find my work on windows object. "
+    },
+    {
+        title: "Week 11",
+        link: "week11.html",
+        intro: "intro:",
+        text: "Here you will find my design and wireframe for the final challenge. "
+    },
+    {
+        title: "Week 12-14",
+        link: "week12-14.html",
+        intro: "intro:",
+        text: "Here it's the final! "
     }
     ];
 
